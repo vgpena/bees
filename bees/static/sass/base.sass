@@ -1,6 +1,6 @@
 @import "variables"
 @import "compass/utilities/general/clearfix"
-
+@import "compass/css3/columns"
 
 
 body
@@ -10,7 +10,7 @@ body
 	font-family: $body-font
 	text-transform: uppercase
 
-.content
+.content, .page-footer
 	font-family: $body-font
 	color: $light-grey
 	font-size: $body-font-size
@@ -53,6 +53,22 @@ body
 .thumb
 	margin: 0px 12px 4px 0px
 	float: left
+	
+
+.page-footer
+	margin-top: 3em
+	border-top: solid 1px $light-grey
+	text-align: center
+	padding: 1em 0px
+	
+.footer-nav > ul
+	list-style-type: none
+	display: inline
+	
+	& > li
+		display: inline-block
+		margin: 0px 0.5em
+	
 //////NAVIGATE THE RAINBOW
 .red
 	background-color:  $red
@@ -86,16 +102,23 @@ body
 		
 ///////ROSTER
 
-.member
-	margin-bottom: 1em
-	+clearfix
-	
-	h3
-		font-weight: normal
-		color: $med-grey
-	
 .squad
 	margin-bottom:  4em
+	+column-count(2)
+
+.member
+	+column-break-inside(avoid)
+	
+	& > h3
+		font-weight: normal
+		color: $med-grey
+		
+		& > p, & > small > p
+			display: inline-block
+		
+	& > p
+		line-height: 1.5em
+	
 
 .squad-title
 	line-height: 30px

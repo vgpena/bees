@@ -10,7 +10,7 @@ body {
 }
 
 /* line 13, ../sass/base.sass */
-.content {
+.content, .page-footer {
   font-family: "Century Gothic";
   color: #6f6f71;
   font-size: 16px;
@@ -67,77 +67,108 @@ body {
   float: left;
 }
 
-/* line 57, ../sass/base.sass */
+/* line 58, ../sass/base.sass */
+.page-footer {
+  margin-top: 3em;
+  border-top: solid 1px #6f6f71;
+  text-align: center;
+  padding: 1em 0px;
+}
+
+/* line 64, ../sass/base.sass */
+.footer-nav > ul {
+  list-style-type: none;
+  display: inline;
+}
+/* line 68, ../sass/base.sass */
+.footer-nav > ul > li {
+  display: inline-block;
+  margin: 0px 0.5em;
+}
+
+/* line 73, ../sass/base.sass */
 .red {
   background-color: #992a3b;
 }
 
-/* line 60, ../sass/base.sass */
+/* line 76, ../sass/base.sass */
 .orange {
   background-color: #b3802d;
 }
 
-/* line 63, ../sass/base.sass */
+/* line 79, ../sass/base.sass */
 .yellow {
   background-color: #b8ba3d;
 }
 
-/* line 66, ../sass/base.sass */
+/* line 82, ../sass/base.sass */
 .green {
   background-color: #618337;
 }
 
-/* line 69, ../sass/base.sass */
+/* line 85, ../sass/base.sass */
 .blue {
   background-color: #597e91;
 }
 
-/* line 72, ../sass/base.sass */
+/* line 88, ../sass/base.sass */
 .purple {
   background-color: #59496e;
 }
 
-/* line 75, ../sass/base.sass */
+/* line 91, ../sass/base.sass */
 .main-nav {
   font-color: #f7f6f1;
   font-family: "Century Gothic";
   font-size: 18px;
 }
-/* line 80, ../sass/base.sass */
+/* line 96, ../sass/base.sass */
 .main-nav a, .main-nav a:visited, .main-nav a:active, .main-nav a:hover {
   color: #f7f6f1;
   display: inline-block;
 }
-/* line 84, ../sass/base.sass */
+/* line 100, ../sass/base.sass */
 .main-nav li {
   padding: 4px;
 }
 
-/* line 89, ../sass/base.sass */
-.member {
-  margin-bottom: 1em;
-  overflow: hidden;
-  *zoom: 1;
+/* line 105, ../sass/base.sass */
+.squad {
+  margin-bottom: 4em;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
 }
-/* line 93, ../sass/base.sass */
-.member h3 {
+
+/* line 109, ../sass/base.sass */
+.member {
+  -webkit-column-break-inside: avoid;
+  column-break-inside: avoid;
+}
+/* line 112, ../sass/base.sass */
+.member > h3 {
   font-weight: normal;
   color: #464646;
 }
-
-/* line 97, ../sass/base.sass */
-.squad {
-  margin-bottom: 4em;
+/* line 116, ../sass/base.sass */
+.member > h3 > p, .member > h3 > small > p {
+  display: inline-block;
+}
+/* line 119, ../sass/base.sass */
+.member > p {
+  line-height: 1.5em;
 }
 
-/* line 100, ../sass/base.sass */
+/* line 123, ../sass/base.sass */
 .squad-title {
   line-height: 30px;
   border-bottom: 1px solid #cccccc;
   font-weight: normal;
 }
 
-/* line 105, ../sass/base.sass */
+/* line 128, ../sass/base.sass */
 .weapon {
   list-style-type: none;
 }
