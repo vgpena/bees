@@ -1,8 +1,10 @@
 {% extends '__base.html' %}
 
+{% load markup humanize %}
+
 {% block title %}{{ flatpage.title }} | {{ block.super }}{% endblock %}
 
-{% block pagetitle %}{{ flatpage.title }}{% endblock %}
+{% block pagetitle %}{{ flatpage.title|markdown }}{% endblock %}
 
 
-{% block bodycontent %}{{ flatpage.content }}{% endblock %}
+{% block bodycontent %}{{ flatpage.content|markdown }}{% endblock %}

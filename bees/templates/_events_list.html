@@ -1,6 +1,7 @@
 {% load daguerre %}
 {% load url from future %}
 {% load staticfiles i18n %}
+{% load markup humanize %}
 
 
 {% regroup events by category as categories_list %}
@@ -12,13 +13,13 @@
 		<ul>
 			{% for event in category.list %}
 			<li>
-				<h4>{{ event.date }} / {{ event.title }}</h4>
-				{{ event.location }}</br>
+				<h4>{{ event.date|humanize }} / {{ event.title|markdown }}</h4>
+				{{ event.location|markdown }}</br>
 				{% if event.preview_image %}
 				<img src="{% adjust event.preview_image.image width=200 height=200 adjustment='fill' %}">
 				{% endif %}
 				{% if event.summary %}
-				{{ event.summary }}</br>
+				{{ event.summary|markdown }}</br>
 				{% endif %}
 				{% if event.media_gallery %}
 					<div id="{{ event.slug }}Carousel" class="carousel slide">
