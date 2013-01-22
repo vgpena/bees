@@ -1,5 +1,6 @@
 {% load url from future %}
 {% load staticfiles i18n %}
+{% load flatpages %}
 
 <!DOCTYPE html>
 <html>
@@ -30,11 +31,21 @@
 		</header>
 		<ul class="nav main-nav">
 			<li class="red"><div class="container"><a href="/">Home</a></div></li>
-			<li class="orange"><div class="container"><a href="/">Information</a> > <a href="">The Team</a> <a href="">The ExCo</a> <a href="">Contact</a></div></li>
-			<li class="yellow"><div class="container"><a href="/">Roster</a></div></li>
+			<li class="orange"><div class="container">
+				{% get_flatpages '/about/' as info_pages %}
+				{% for page in info_pages %}
+					<a href="{{ page.url }}">{{ page.title }}</a>
+				{% endfor %}
+			</div></li>
+			<li class="yellow"><div class="container"><a href="/roster/">Roster</a></div></li>
 			<li class="green"><div class="container"><a href="/">Events</a></div></li>
-			<li class="blue"><div class="container"><a href="/">Media</a> > <a href="">Photos</a> <a href="">Videos</a></div></li>
-			<li class="purple"><div class="container"><a href="/">Culture</a> > <a href="">Quotes</a> <a href="">Links</a> <a href="">Miscellaneous</a></div></li>
+			<li class="blue"><div class="container"><a href="/">Media</a> > <a href="/gallery/">Photos</a> <a href="">Videos</a></div></li>
+			<li class="purple"><div class="container">
+				{% get_flatpages '/culture/' as cult_pages %}
+				{% for cult in cult_pages %}
+					<a href="{{ cult.url }}">{{ cult.title }}</a>
+				{% endfor %}
+			</div></li>
 		</ul>
 		<div class="container-fluid">
 			<div class="span12">
