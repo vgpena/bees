@@ -1,0 +1,23 @@
+{% extends '__base.html' %}
+
+{% load daguerre %}
+{% load url from future %}
+{% load staticfiles i18n %}
+
+{% block title %}Gallery{% endblock %}
+{% block pagetitle %}Gallery{% endblock %}
+{% block bodycontent %}
+	<ul class="galleries">
+		{% for gallery in galleries %}
+		<li>
+			<h3>{{ gallery.title }} <small>{{ gallery.subtitle }}</small></h3>
+			<ul>
+				{% for photo in gallery.photos.all %}
+					<li>
+						<img src="{% adjust photo.image.image width=200 height=200 adjustment='fill' %}">
+					</li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+	</ul>
+{% endblock %}

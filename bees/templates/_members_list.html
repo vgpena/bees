@@ -1,0 +1,24 @@
+{% load daguerre %}
+
+{% regroup roster by weapon as team_list %}
+<ul class="roster">
+	{% for weapon in team_list %}
+		<li class="weapon">
+			{% regroup weapon.list by gender as squad_list %}
+			{% for gender in squad_list %}
+				<h2 class="squad-title">{{ gender.grouper }} {{ weapon.grouper }}</h2>
+				<ul class="squad">
+					{% for member in gender.list %}
+						<li class="member">
+							<h3>{{ member.first_name }} {{ member.last_name }}{% if member.grad_year or member.titles %}<small>{% if member.grad_year %} / {{ member.grad_year }}{% endif %}{% if member.titles %} / {{ member.titles }}{% endif %}</small>{% endif %}</h3>
+							{% if member.photo %}
+								<figure class="thumb"><img src="{% adjust member.photo.image width=200 height=200 adjustment='fill' %}"></figure>
+							{% endif %}
+							{{ member.bio }}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+		</li>
+	{% endfor %}
+</ul>

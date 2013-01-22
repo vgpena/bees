@@ -1,0 +1,14 @@
+{% extends '__base.html' %}
+
+{% load daguerre %}
+{% load url from future %}
+{% load staticfiles i18n %}
+
+{% block title %}Events{% endblock %}
+{% block pagetitle %}Events{% endblock %}
+{% block bodycontent %}
+
+{% include "_events_list.html" with events=upcoming list="Upcoming"%}
+{% include "_events_list.html" with events=past list="Past"%}
+
+{% endblock %}

@@ -1,0 +1,4 @@
+.DS_Store
+bees.egg-info/
+bees/static/.sass-cache
+.pyc

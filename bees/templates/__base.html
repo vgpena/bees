@@ -1,0 +1,54 @@
+{% load url from future %}
+{% load staticfiles i18n %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}" type="text/css" />
+		<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-responsive.css" %}" type="text/css" />
+		<link rel="stylesheet" href="/static/stylesheets/base.css" type="text/css" />
+	
+		<script src='{% static "js/jquery-1.8.2.min.js" %}' type="text/javascript" charset="utf-8"></script>
+		<script src='{% static "bootstrap/js/bootstrap.js" %}' type="text/javascript" charset="utf-8"></script>
+		
+		<title>
+			{% block title %}
+				OCFB Online
+			{% endblock %}
+		</title>
+	</head>
+	<body>
+		<header class="header-block">
+			<div class="container-fluid page-header">
+				<div class="span1"></div>
+				<div class="span2 logo"></div>
+				<div class="span1"></div>
+				<div class="span8 title">
+					<h1 class="site-title">Oberlin College Flaming Blades</h1>
+				</div>
+			</div>
+		</header>
+		<ul class="nav main-nav">
+			<li class="red"><div class="container"><a href="/">Nav Item 1</a></div></li>
+			<li class="orange"><a href="/">Nav Item 2</a></li>
+			<li class="yellow"><a href="/">Nav Item 3</a></li>
+			<li class="green"><a href="/">Nav Item 4</a></li>
+			<li class="blue"><a href="/">Nav Item 5</a></li>
+			<li class="purple"><a href="/">Nav Item 6</a></li>
+		</ul>
+		<div class="container-fluid">
+			<div class="span12">
+				<div class="content">
+					<h2 class="pagetitle">
+						{% block pagetitle %}
+							En Garde!
+						{% endblock %}
+					</h2>
+					{% block bodycontent %}
+						hey everyone!
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

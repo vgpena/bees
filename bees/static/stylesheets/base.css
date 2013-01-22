@@ -1,0 +1,143 @@
+/* line 6, ../sass/base.sass */
+body {
+  background-color: #f4f2e6;
+}
+
+/* line 9, ../sass/base.sass */
+.main-nav {
+  font-family: "Century Gothic";
+  text-transform: uppercase;
+}
+
+/* line 13, ../sass/base.sass */
+.content {
+  font-family: "Century Gothic";
+  color: #6f6f71;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+/* line 19, ../sass/base.sass */
+.page-header {
+  font-family: "Bebas Neue";
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #f7f6f1;
+  margin: 0px;
+  border-bottom: 0px;
+}
+
+/* line 27, ../sass/base.sass */
+.header-block {
+  background-color: #61605c;
+  padding: 8px;
+}
+
+/* line 31, ../sass/base.sass */
+.site-title {
+  margin: 0px;
+  font-size: 120px;
+  line-height: 120px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  letter-spacing: 2px;
+}
+
+/* line 39, ../sass/base.sass */
+.pagetitle {
+  color: #464646;
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: normal;
+  text-align: center;
+  margin: 12px 0px;
+}
+
+/* line 47, ../sass/base.sass */
+.logo {
+  background-color: #f4f2e6;
+  height: 220px;
+  margin-top: -10px;
+  display: inline-block;
+}
+
+/* line 53, ../sass/base.sass */
+.thumb {
+  margin: 0px 12px 4px 0px;
+  float: left;
+}
+
+/* line 57, ../sass/base.sass */
+.red {
+  background-color: #992a3b;
+}
+
+/* line 60, ../sass/base.sass */
+.orange {
+  background-color: #b3802d;
+}
+
+/* line 63, ../sass/base.sass */
+.yellow {
+  background-color: #b8ba3d;
+}
+
+/* line 66, ../sass/base.sass */
+.green {
+  background-color: #618337;
+}
+
+/* line 69, ../sass/base.sass */
+.blue {
+  background-color: #597e91;
+}
+
+/* line 72, ../sass/base.sass */
+.purple {
+  background-color: #59496e;
+}
+
+/* line 75, ../sass/base.sass */
+.main-nav {
+  font-color: #f7f6f1;
+  font-family: "Century Gothic";
+  font-size: 18px;
+}
+/* line 80, ../sass/base.sass */
+.main-nav a, .main-nav a:visited, .main-nav a:active, .main-nav a:hover {
+  color: #f7f6f1;
+  display: inline-block;
+}
+/* line 84, ../sass/base.sass */
+.main-nav li {
+  padding: 4px;
+}
+
+/* line 89, ../sass/base.sass */
+.member {
+  margin-bottom: 1em;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 93, ../sass/base.sass */
+.member h3 {
+  font-weight: normal;
+  color: #464646;
+}
+
+/* line 97, ../sass/base.sass */
+.squad {
+  margin-bottom: 4em;
+}
+
+/* line 100, ../sass/base.sass */
+.squad-title {
+  line-height: 30px;
+  border-bottom: 1px solid #cccccc;
+  font-weight: normal;
+}
+
+/* line 105, ../sass/base.sass */
+.weapon {
+  list-style-type: none;
+}

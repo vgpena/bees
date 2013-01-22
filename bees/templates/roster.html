@@ -1,0 +1,15 @@
+{% extends '__base.html' %}
+
+{% load daguerre %}
+{% load url from future %}
+{% load staticfiles i18n %}
+
+{% block title %}Roster{% endblock %}
+{% block pagetitle %}Roster{% endblock %}
+{% block bodycontent %}
+
+	{% include "_members_list.html" with roster=current %}
+	<h2>Past Members</h2>
+	{% include "_members_list.html" with roster=past %}
+
+{% endblock %}
