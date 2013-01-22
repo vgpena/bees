@@ -172,3 +172,33 @@ body {
 .weapon {
   list-style-type: none;
 }
+
+/* line 133, ../sass/base.sass */
+.galleries {
+  list-style-type: none;
+}
+
+/* line 136, ../sass/base.sass */
+.gallery {
+  list-style-type: none;
+  margin-left: 0px;
+}
+/* line 139, ../sass/base.sass */
+.gallery > li {
+  display: inline-block;
+}
+
+/* line 142, ../sass/base.sass */
+.gallery-title {
+  margin-bottom: 0px;
+}
+
+/* line 145, ../sass/base.sass */
+.count {
+  margin-top: 0px;
+  padding-left: 1em;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 0.8em;
+}

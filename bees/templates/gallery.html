@@ -4,17 +4,18 @@
 {% load url from future %}
 {% load staticfiles i18n %}
 
-{% block title %}Gallery{% endblock %}
-{% block pagetitle %}Gallery{% endblock %}
+{% block title %}Photo Gallery{% endblock %}
+{% block pagetitle %}Photo Gallery{% endblock %}
 {% block bodycontent %}
 	<ul class="galleries">
 		{% for gallery in galleries %}
 		<li>
-			<h3>{{ gallery.title }} <small>{{ gallery.subtitle }}</small></h3>
-			<ul>
+			<h3 class="gallery-title">{{ gallery.title }} <small>{{ gallery.subtitle }}</small></h3>
+			<h4 class="count">{{ gallery.photos.all|length }} Photo{% if gallery.photos.all|length > 1 %}s{% endif %}</h4>
+			<ul class="gallery">
 				{% for photo in gallery.photos.all %}
 					<li>
-						<img src="{% adjust photo.image.image width=200 height=200 adjustment='fill' %}">
+						<img src="{% adjust photo.image.image width=100 height=100 adjustment='fill' %}">
 					</li>
 				{% endfor %}
 			</ul>

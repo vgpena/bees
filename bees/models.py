@@ -90,7 +90,7 @@ class Member(models.Model):
 	gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
 	weapon = models.CharField(max_length=10, choices=WEAPON_CHOICES)
 	photo = models.ForeignKey('daguerre.Image', blank=True, null=True)
-	bio = models.TextField()
+	bio = models.TextField(help_text="Parsed according to <a href='http://daringfireball.net/projects/markdown/syntax'>Markdown Syntax</a>")
 
 	def __unicode__(self):
 		return (self.slug)
